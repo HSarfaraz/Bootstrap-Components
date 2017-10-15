@@ -8,8 +8,13 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 <style>
+.input-group-addon {
+   color: #fff;
+   background-color: #337ab7;
+}
 
-.form-control {
+
+.form-control, .input-group-addon {
    border-radius: 0px;
 }
 label{
@@ -172,3 +177,4 @@ label{
 
 </body> 
 </html>
+
