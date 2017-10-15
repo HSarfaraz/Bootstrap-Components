@@ -132,7 +132,7 @@ label{
                                 <div class="form-group">
                                     <label for="icode" class="col-md-4 control-label">Invitation Code</label>
                                     <div class="col-md-8">
-                                        <input type="text" class="form-control input-sm" name="icode" placeholder="">
+                                        <input type="text" class="form-control input-sm" name="icode" placeholder="Invitation Code">
                                     </div>
                                 </div>
 
