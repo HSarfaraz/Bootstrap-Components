@@ -21,7 +21,12 @@
    background-color: #337ab7;
 }
 
-
+.btn:hover{
+   color: #337ab7;
+   background-color:#fff;
+   border: 2px solid #337ab7;
+   font-weight: bold;
+}
 .form-control, .input-group-addon, .btn, .modal-content { 
    border-radius: 2px;
 }
@@ -201,7 +206,7 @@ label{
                                     <!-- Button -->
 
                                     <div class="col-sm-12 controls text-center">
-                                      <a id="btn-login" href="#" class="btn btn-primary btn-sm"> Login <i class="fa fa-sign-in" aria-hidden="true"></i>   </a>
+                                      <a id="btn-login" href="#" class="btn btn-primary btn-sm btn-block"> Login <i class="fa fa-sign-in" aria-hidden="true"></i>   </a>
                                       <!--<a id="btn-fblogin" href="#" class="btn btn-primary">Login with Facebook</a>-->
 
                                     </div>
@@ -254,8 +259,8 @@ label{
                                 
                                 <div class="form-group">
                                     <!-- Button -->                                        
-                                    <div class="col-md-offset-4 col-md-8">
-                                        <button id="btn-signup" type="button" class="btn btn-primary btn-sm"> Sign Up <i class="fa fa-user-plus" aria-hidden="true"></i></button>
+                                    <div class="col-md-offset-0 col-md-12">
+                                        <button id="btn-signup" type="button" class="btn btn-primary btn-sm btn-block"> Sign Up <i class="fa fa-user-plus" aria-hidden="true"></i></button>
                                         <!--<span style="margin-left:8px;">or</span>  -->
                                     </div>
                                 </div>
@@ -288,14 +293,6 @@ label{
     </div>
   </div>
 </div>
-
-
-
-
-
-
-
-
 
 </body>
 </html>
