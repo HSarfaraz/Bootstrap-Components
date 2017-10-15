@@ -259,8 +259,8 @@ label{
                                 
                                 <div class="form-group">
                                     <!-- Button -->                                        
-                                    <div class="col-md-offset-0 col-md-12">
-                                        <button id="btn-signup" type="button" class="btn btn-primary btn-sm btn-block"> Sign Up <i class="fa fa-user-plus" aria-hidden="true"></i></button>
+                                    <div class="col-md-offset-4 col-md-8">
+                                        <button id="btn-signup" type="button" class="btn btn-primary btn-sm"> Sign Up <i class="fa fa-user-plus" aria-hidden="true"></i></button>
                                         <!--<span style="margin-left:8px;">or</span>  -->
                                     </div>
                                 </div>
