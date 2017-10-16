@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<style>
+    .modal-custom-header{
+        background-color: #337ab7;
+        color: #fff;
+        text-align: center;
+    }
+
+    .form-control, .input-group-addon, .btn, .modal-content {
+        border-radius: 2px;
+    }
+    label{
+        text-align: left !important;
+    }
+    .close:hover {
+        color: #fff;
+    }
+
+
+    /* distance between stacked modals*/
+    /* The first modal translateZ value*/
+    .container {
+        margin: 5em auto;
+    }
+    .modal.in {
+        -webkit-perspective: 2000px;
+        -moz-perspective: 2000px;
+        -ms-perspective: 2000px;
+        -o-perspective: 2000px;
+        perspective: 2000px;
+    }
+    .modal.in .modal-dialog.aside {
+        -webkit-transform: scale(0.8) rotateY(45deg) translateZ(-340px);
+        -ms-transform: scale(0.8) rotateY(45deg) translateZ(-340px);
+        -o-transform: scale(0.8) rotateY(45deg) translateZ(-340px);
+        transform: scale(0.8) rotateY(45deg) translateZ(-340px);
+        -webkit-transform-style: preserve-3d;
+        -ms-transform-style: preserve-3d;
+        -o-transform-style: preserve-3d;
+        transform-style: preserve-3d;
+    }
+    .modal.in .modal-dialog.aside.aside-1 {
+        -webkit-transform: scale(0.8) rotateY(45deg) translateZ(calc(-300px));
+        -ms-transform: scale(0.8) rotateY(45deg) translateZ(calc(-300px));
+        -o-transform: scale(0.8) rotateY(45deg) translateZ(calc(-300px));
+        transform: scale(0.8) rotateY(45deg) translateZ(calc(-300px));
+    }
+    .modal.in .modal-dialog.aside.aside-2 {
+        -webkit-transform: scale(0.8) rotateY(45deg) translateZ(calc(-260px));
+        -ms-transform: scale(0.8) rotateY(45deg) translateZ(calc(-260px));
+        -o-transform: scale(0.8) rotateY(45deg) translateZ(calc(-260px));
+        transform: scale(0.8) rotateY(45deg) translateZ(calc(-260px));
+    }
+    .modal.in .modal-dialog.aside.aside-3 {
+        -webkit-transform: scale(0.8) rotateY(45deg) translateZ(calc(-220px));
+        -ms-transform: scale(0.8) rotateY(45deg) translateZ(calc(-220px));
+        -o-transform: scale(0.8) rotateY(45deg) translateZ(calc(-220px));
+        transform: scale(0.8) rotateY(45deg) translateZ(calc(-220px));
+    }
+    .modal.in .modal-dialog.aside.aside-4 {
+        -webkit-transform: scale(0.8) rotateY(45deg) translateZ(calc(-180px));
+        -ms-transform: scale(0.8) rotateY(45deg) translateZ(calc(-180px));
+        -o-transform: scale(0.8) rotateY(45deg) translateZ(calc(-180px));
+        transform: scale(0.8) rotateY(45deg) translateZ(calc(-180px));
+    }
+    .modal.in .modal-dialog.aside.aside-5 {
+        -webkit-transform: scale(0.8) rotateY(45deg) translateZ(calc(-140px));
+        -ms-transform: scale(0.8) rotateY(45deg) translateZ(calc(-140px));
+        -o-transform: scale(0.8) rotateY(45deg) translateZ(calc(-140px));
+        transform: scale(0.8) rotateY(45deg) translateZ(calc(-140px));
+    }
+
+</style>
+<body>
+
+<div class="container">
+    <h1>Stack Bootstrap modals nicely</h1>
+
+    <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#test-modal">Show Modal</button>
+
+    <div class="modal fade" id="test-modal" data-modal-index="1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header modal-custom-header">
+                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                    <h4 class="modal-title">Modal title 1</h4>
+                </div>
+                <div class="modal-body">
+                    <p>One fine body&hellip;</p>
+                    <button class="btn btn-default" data-toggle="modal" data-target="#test-modal-2">Launch Modal 2</button>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
+
+    <div class="modal fade" id="test-modal-2" data-modal-index="2">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header modal-custom-header">
+                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                    <h4 class="modal-title">Modal title 2</h4>
+                </div>
+                <div class="modal-body">
+                    <p>One fine body&hellip;</p>
+                    <button class="btn btn-default" data-toggle="modal" data-target="#test-modal-3">Launch Modal 3</button>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
+    <div class="modal fade" id="test-modal-3">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header modal-custom-header">
+                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                    <h4 class="modal-title">Modal title 3</h4>
+                </div>
+                <div class="modal-body">
+                    <p>One fine body&hellip;</p>
+
+                    <button class="btn btn-default" data-toggle="modal" data-target="#test-modal-4">Launch Modal 4</button>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
+
+    <div class="modal fade" id="test-modal-4">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header modal-custom-header">
+                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                    <h4 class="modal-title">Modal title 4</h4>
+                </div>
+                <div class="modal-body">
+                    <p>One fine body&hellip;</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+</div>
+
+<script>
+    $('.btn[data-toggle=modal]').on('click', function(){
+        var $btn = $(this);
+        var currentDialog = $btn.closest('.modal-dialog'),
+            targetDialog = $($btn.attr('data-target'));;
+        if (!currentDialog.length)
+            return;
+        targetDialog.data('previous-dialog', currentDialog);
+        currentDialog.addClass('aside');
+        var stackedDialogCount = $('.modal.in .modal-dialog.aside').length;
+        if (stackedDialogCount <= 5){
+            currentDialog.addClass('aside-' + stackedDialogCount);
+        }
+    });
+
+    $('.modal').on('hide.bs.modal', function(){
+        var $dialog = $(this);
+        var previousDialog = $dialog.data('previous-dialog');
+        if (previousDialog){
+            previousDialog.removeClass('aside');
+            $dialog.data('previous-dialog', undefined);
+        }
+    });
+</script>
+</body>
+</html>
