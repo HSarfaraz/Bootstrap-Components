@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<style>
+    .input-group-addon {
+        color: #fff;
+        background-color: #337ab7;
+    }
+
+
+    .form-control, .input-group-addon, .btn {
+        border-radius: 2px;
+    }
+    label{
+        text-align: left !important;
+    }
+</style>
+<body>
+
+<div class="container">
+
+    <div id="loginbox" style="margin-top:50px;" class="mainbox col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3">
+        <div class="panel panel-primary" >
+            <div class="panel-heading">
+                <div class="panel-title text-center"><i class="fa fa-sign-in" aria-hidden="true"></i> Sign In</div>
+                <div style="float:right; font-size: 80%; position: relative; top:-10px"><a href="#">Forgot password?</a></div>
+            </div>
+
+            <div style="padding-top:30px" class="panel-body" >
+
+                <div style="display:none" id="login-alert" class="alert alert-danger col-sm-12"></div>
+
+                <form id="loginform" class="form-horizontal" role="form">
+
+                    <div style="margin-bottom: 25px" class="input-group col-sm-12">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                        <input id="login-username" type="text" class="form-control input-sm" name="username" value="" placeholder="username or email">
+                    </div>
+
+                    <div style="margin-bottom: 25px" class="input-group col-sm-12">
+                        <span class="input-group-addon"><i class="fa fa-lock" aria-hidden="true"></i></span>
+                        <input id="login-pwd" type="text" class="form-control input-sm" name="password" value="" placeholder="password">
+                    </div>
+
+
+                    <div style="margin-top:10px" class="form-group">
+                        <!-- Button -->
+
+                        <div class="col-sm-12 controls text-center">
+                            <a id="btn-login" href="#" class="btn btn-primary btn-sm"> Login <i class="fa fa-sign-in" aria-hidden="true"></i>   </a>
+                            <!--<a id="btn-fblogin" href="#" class="btn btn-primary">Login with Facebook</a>-->
+
+                        </div>
+                    </div>
+
+
+                    <div class="form-group">
+                        <div class="col-md-12 control">
+                            <div style="border-top: 1px solid#888; padding-top:15px; font-size:85%" >
+                                Don't have an account!
+                                <a href="#" onClick="$('#loginbox').hide(); $('#signupbox').show()">
+                                    Sign Up Here
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+
+
+
+            </div>
+        </div>
+    </div>
+    <div id="signupbox" style="display:none; margin-top:50px" class="mainbox col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3">
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <div class="panel-title text-center">Sign Up <i class="fa fa-user-plus" aria-hidden="true"></i></div>
+                <div style="float:right; font-size: 85%; position: relative; top:-10px"><a id="signinlink" href="#" onclick="$('#signupbox').hide(); $('#loginbox').show()">Sign In</a></div>
+            </div>
+            <div class="panel-body" >
+                <form id="signupform" class="form-horizontal" role="form">
+
+                    <div id="signupalert" style="display:none" class="alert alert-danger">
+                        <p>Error:</p>
+                        <span></span>
+                    </div>
+
+                    <div style="margin-bottom: 25px" class="input-group col-sm-12">
+                        <span class="input-group-addon"><i class="fa fa-envelope" aria-hidden="true"></i></span>
+                        <input id="reg-email" type="text" class="form-control input-sm" name="email" value="" placeholder="Email Address">
+                    </div>
+
+                    <div style="margin-bottom: 25px" class="input-group col-sm-12">
+                        <span class="input-group-addon"><i class="fa fa-user-circle" aria-hidden="true"></i></span>
+                        <input id="reg-fname" type="text" class="form-control input-sm" name="firstname" value="" placeholder="First Name">
+                    </div>
+
+                    <div style="margin-bottom: 25px" class="input-group col-sm-12">
+                        <span class="input-group-addon"><i class="fa fa-user-circle" aria-hidden="true"></i></span>
+                        <input id="reg-lname" type="text" class="form-control input-sm" name="lastname" value="" placeholder="Last Name">
+                    </div>
+
+                    <div style="margin-bottom: 25px" class="input-group col-sm-12">
+                        <span class="input-group-addon"><i class="fa fa-lock" aria-hidden="true"></i></span>
+                        <input id="reg-pwd" type="text" class="form-control input-sm" name="passwd" value="" placeholder="Password">
+                    </div>
+
+                    <div style="margin-bottom: 25px" class="input-group col-sm-12">
+                        <span class="input-group-addon"><i class="fa fa-unlock-alt" aria-hidden="true"></i></span>
+                        <input id="reg-icode" type="text" class="form-control input-sm" name="icode" value="" placeholder="Invitation Code">
+                    </div>
+
+                    <div class="form-group">
+                        <!-- Button -->
+                        <div class="col-md-offset-4 col-md-6">
+                            <button id="btn-signup" type="button" class="btn btn-primary btn-sm"> Sign Up <i class="fa fa-user-plus" aria-hidden="true"></i></button>
+                            <!--<span style="margin-left:8px;">or</span>  -->
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col-md-12 control">
+                            <div style="border-top: 1px solid#888; padding-top:15px; font-size:85%" >
+                                Do you have an account!
+                                <a href="#" onClick="$('#signupbox').hide(); $('#loginbox').show()">
+                                    Login Here
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>
