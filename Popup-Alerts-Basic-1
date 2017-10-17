@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<style>
+    .modal-custom-header{
+        color: #fff;
+        text-align: center;
+        min-height: 50px;
+    }
+    .modal-success-header {
+        background-color: #3ABA6F;
+        border-bottom: 1px solid #3ABA6F;
+    }
+    .modal-warning-header {
+        background-color: #f0ad4e;
+        border-bottom: 1px solid #f0ad4e;
+    }
+
+    .modal-info-header {
+        background-color: #269abc;
+        border-bottom: 1px solid #269abc;
+    }
+
+    .modal-error-header {
+        background-color: #e74c3c;
+        border-bottom: 1px solid #e74c3c;
+    }
+    .modal-custom-header{
+        border-radius:2px 2px 0px 0px;
+      }
+    .form-control, .input-group-addon, .btn, .modal-content, .modal-footer {
+        border-radius: 2px;
+    }
+    label{
+        text-align: left !important;
+    }
+    .close:hover, .close {
+        color: #fff;
+    }
+    /*.modal-header {
+        border-bottom: 1px solid #46b8da;
+    }*/
+    .modal-footer {
+        text-align: center;
+    }
+</style>
+<body>
+<div class="container">
+    <h2>Different Modals</h2>
+    <!-- Trigger the modal with a button -->
+    <button type="button" class="btn btn-info btn-md" data-toggle="modal" data-target="#myModal" id="infoModal">Info Modal</button>
+
+    <button type="button" class="btn btn-success btn-md" data-toggle="modal" data-target="#myModal" id="successModal">Success Modal</button>
+
+    <button type="button" class="btn btn-danger btn-md" data-toggle="modal" data-target="#myModal" id="errorModal">Error Modal</button>
+
+    <button type="button" class="btn btn-warning btn-md" data-toggle="modal" data-target="#myModal" id="warningModal">Warning Modal</button>
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog modal-sm">
+
+
+
+
+            <div class="modal-content" id="modal-success-content" style="display:none">
+                <div class="modal-header modal-custom-header modal-success-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <div><i class="fa fa-check-square fa-3x" aria-hidden="true"></i></div>
+                    <h4>Success</h4>
+                    <p>Form submitted successfully !</p>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-success btm-sm" data-dismiss="modal">Close</button>
+                </div>
+
+            </div>
+
+            <div class="modal-content" id="modal-info-content" style="display:none">
+                <div class="modal-header modal-custom-header modal-info-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <div><i class="fa fa-info-circle fa-3x" aria-hidden="true"></i></div>
+                    <h4>Info !</h4>
+                    <p>This info will be helpful !</p>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-info btm-sm" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+
+            <div class="modal-content" id="modal-warning-content" style="display:none">
+                <div class="modal-header modal-custom-header modal-warning-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <div><i class="fa fa-warning fa-3x" aria-hidden="true"></i></div>
+                    <h4>Warning !</h4>
+                    <p>This is an alert message !</p>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-warning btm-sm" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+
+            <div class="modal-content" id="modal-error-content" style="display:none">
+                <div class="modal-header modal-custom-header modal-error-header">
+                    <button type="button" class="close" data-dismiss="modal" style="color: #fff;">&times;</button>
+                    <div><i class="fa fa-times-rectangle fa-3x" aria-hidden="true"></i></div>
+                    <h4>Error !</h4>
+                    <p>This is an error message !</p>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger btm-sm" data-dismiss="modal">Close</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+
+    $(document).ready(function(){
+
+        $("#infoModal").click(function(){
+            $("#modal-info-content").css("display", "block");
+            $("#modal-success-content, #modal-error-content, #modal-warning-content").css("display", "none");
+        });
+
+        $("#successModal").click(function(){
+            $("#modal-success-content").css("display", "block");
+            $("#modal-info-content, #modal-error-content, #modal-warning-content").css("display", "none");
+        });
+
+        $("#errorModal").click(function(){
+            $("#modal-error-content").css("display", "block");
+            $("#modal-success-content, #modal-info-content, #modal-warning-content").css("display", "none");
+        });
+
+        $("#warningModal").click(function(){
+            $("#modal-warning-content").css("display", "block");
+            $("#modal-success-content, #modal-error-content, #modal-info-content").css("display", "none");
+        });
+    })
+    </script>
+</body>
+</html>
