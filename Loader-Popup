@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<style>
+    .modal-custom-header, .fa-refresh{
+        color: #269abc;
+        text-align: center;
+    }
+    .modal-header {
+        padding: 8px;
+        border-bottom: none;
+    }
+    .form-control, .input-group-addon, .btn, .modal-content {
+        border-radius: 2px;
+    }
+    label{
+        text-align: left !important;
+    }
+
+    #modal-loading-content {
+        background-color: #d9edf7;
+    }
+
+
+
+
+</style>
+<body>
+<div class="container" style="margin-top: 20px;">
+
+    <!-- Trigger the Loader modal with a button -->
+    <button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#myModal">Loading Modal</button>
+
+    <!-- Modal -->
+    <div class="modal fade"  data-keyboard="false" data-backdrop="static" id="myModal" role="dialog">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content" id="modal-loading-content">
+                <div class="modal-header">
+                    <!--<button type="button" class="close" data-dismiss="modal">&times;</button>-->
+                    <span class="fa fa-refresh fa-spin fa-2x fa-fw"></span>
+                    <span>&nbsp;&nbsp;&nbsp;<label> Please Wait, Loading...</label></span>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>
