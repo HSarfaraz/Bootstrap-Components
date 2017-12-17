@@ -23,7 +23,7 @@ body{
 }
 #data_table{
 	background-color:#fff;
-	padding:20px;
+	padding:0px;
 	border-radius: 10px;
 }
 .add{
@@ -39,6 +39,19 @@ body{
 .pagination>.active>a{
 	background-color: #000;
     border-color: #000;
+}
+.hide{
+	dispaly:none;
+}
+.table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th{
+	border-top:none;
+}
+thead{
+	background-color: gray;
+	color: #fff;
+}
+.table>thead>tr>th{
+	border-bottom: none;
 }
 </style>
 <body>
