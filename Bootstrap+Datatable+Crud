@@ -103,9 +103,9 @@ thead{
 		</tr>
 
 		<tr>
-			<td><input type="text" class="form-control" id="new_name"></td>
-			<td><input type="text" class="form-control" id="new_country"></td>
-			<td><input type="number" class="form-control" id="new_age"></td>
+			<td><input type="text" class="form-control input-sm" id="new_name"></td>
+			<td><input type="text" class="form-control input-sm" id="new_country"></td>
+			<td><input type="number" class="form-control input-sm" id="new_age"></td>
 			<td><button type="button" onclick="add_row();" class="add btn btn-sm btn-success"><span class="glyphicon glyphicon-plus"> </span></button></td>
 		</tr>
 </tbody>
