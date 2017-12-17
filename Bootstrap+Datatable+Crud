@@ -47,12 +47,17 @@ body{
 	border-top:none;
 }
 thead{
-	background-color: gray;
-	color: #fff;
+	background-color: #E2EFDA;
+	color: #000;
 }
 .table>thead>tr>th{
 	border-bottom: none;
 }
+/* .dataTables_filter input { width: 750px } */
+div.dataTables_wrapper div.dataTables_filter input {
+    /* margin-left: -57.5em; */
+    /* width: 400px;  */
+ }
 </style>
 <body>
 
@@ -142,7 +147,7 @@ function save_row(no)
  document.getElementById("age_row"+no).innerHTML=age_val;
 
  document.getElementById("edit_button"+no).style.display="inline";
- <!-- document.getElementById("save_button"+no).style.display="none"; -->
+ // document.getElementById("save_button"+no).style.display="none"; 
 }
 
 function delete_row(no)
@@ -166,7 +171,21 @@ function add_row()
 }
 
 $(document).ready(function(){
-	$('#data_table').dataTable();
+	$('#data_table').dataTable({
+        
+         
+        language: {
+            search: "",
+            searchPlaceholder: " Find Client",
+            sLengthMenu: "_MENU_",
+            info: "",
+            paginate: {
+                previous: '<span class="glyphicon glyphicon-menu-left"></span>',
+                    next: '<span class="glyphicon glyphicon-menu-right"></span>'
+            }
+         }
+         
+    });
 });
 </script>
 </body>
